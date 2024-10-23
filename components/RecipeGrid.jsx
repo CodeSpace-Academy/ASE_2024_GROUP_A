@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { getRecipes } from "@/lib/api";
 import RecipeCard from "./RecipeCard";
 import { Pagination } from "./pagination";
+import Loader from "./Loader";
 
 export default function RecipeGrid() {
   const [recipes, setRecipes] = useState([]);
@@ -63,7 +64,7 @@ export default function RecipeGrid() {
         <div className="md:col-span-3">
           {loading ? (
             <div className="flex justify-center items-center min-h-[400px]">
-              <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-teal-500"></div>
+              <Loader /> 
             </div>
           ) : (
             <>
