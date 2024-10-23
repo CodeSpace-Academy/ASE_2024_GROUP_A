@@ -5,7 +5,6 @@ import { getRecipes } from "@/lib/api";
 import RecipeCard from "./RecipeCard";
 import Pagination from "./Pagination";
 import { useRouter, useSearchParams } from "next/navigation";
-import { Pagination } from "./pagination";
 import Loader from "./Loader";
 
 export default function RecipeGrid() {
