@@ -10,7 +10,7 @@ export default function ImageSelector({ images }) {
   return (
     <div>
       {/* Main Selected Image */}
-      <div className="px-4 py-12 rounded-xl">
+      <div className="bg-gray-200 px-4 py-12 rounded-xl">
         <Image
           src={selectedImage}
           alt="Recipe"

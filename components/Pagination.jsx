@@ -20,10 +20,6 @@ export default function Pagination({ currentPage, totalPages }) {
     return () => window.removeEventListener("resize", checkIsMobile);
   }, []);
 
-  useEffect(() => {
-    setPage(currentPage)
-  }, [currentPage]);
-
   const onPageChange = (newPage) => {
     if (newPage >= 1 && newPage <= totalPages) {
       setPage(newPage);

@@ -15,7 +15,6 @@ const Loader = () => {
             83.33% { -webkit-mask: conic-gradient(#0000 300deg, #000 0); }
             100%   { -webkit-mask: conic-gradient(#0000 360deg, #000 0); }
           }
-          }
         `}
       </style>
     </div>
@@ -57,3 +56,4 @@ const styles = {
 };
 
 export default Loader;
+

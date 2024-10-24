@@ -13,10 +13,11 @@ export const metadata = {
 
 export default async function Home({ searchParams }) {
   const page = Number(searchParams?.page) || 1;
+
   const { recipes, totalPages } = await getRecipes(page, 20);
 
   return (
-    <div className="pt-16">
+    <div className="min-h-screen">
       <div className="container mx-auto px-4 py-8">
         <RecipeGrid recipes={recipes} />
         {recipes.length > 0 ? (
