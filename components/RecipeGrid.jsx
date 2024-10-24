@@ -58,6 +58,7 @@ export default function RecipeGrid() {
   }
 
   return (
+<<<<<<< HEAD
     <div className="container mx-auto px-4 py-8">
       <div>
         <div className="md:col-span-3">
@@ -88,6 +89,13 @@ export default function RecipeGrid() {
             </>
           )}
         </div>
+=======
+    <div className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6">
+        {recipes.map((recipe) => (
+          <RecipeCard key={recipe._id} recipe={recipe} />
+        ))}
+>>>>>>> aa5f051e8e1fd454ac8e0365c88fdcccbc2e7cff
       </div>
     </div>
   );
