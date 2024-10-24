@@ -1,17 +1,24 @@
 import RecipeGrid from "@/components/RecipeGrid";
-import Footer from "@/components/Footer";
+import Pagination from "@/components/Pagination";
+import { getRecipes } from "@/lib/api";
 
-export default function Home() {
+export const metadata = {
+  title: "Browse All Recipes",
+  description: "Browse through our collection of delicious recipes. Find everything from quick weeknight dinners to gourmet dishes.",
+  openGraph: {
+    title: "Browse All Recipes | Culinary Haven",
+    description: "Browse through our collection of delicious recipes. Find everything from quick weeknight dinners to gourmet dishes.",
+  }
+};
+
+export default async function Home({ searchParams }) {
+  const page = Number(searchParams?.page) || 1;
+  const { recipes, totalPages } = await getRecipes(page, 20);
+
   return (
-<<<<<<< HEAD
-    <>
-      <RecipeGrid />
-    </>
-=======
     <div className="min-h-screen">
       <div className="container mx-auto px-4 py-8">
         <RecipeGrid recipes={recipes} />
-
         {recipes.length > 0 ? (
           <div className="mt-8">
             <Pagination currentPage={page} totalPages={totalPages} />
@@ -23,6 +30,5 @@ export default function Home() {
         )}
       </div>
     </div>
->>>>>>> aa5f051e8e1fd454ac8e0365c88fdcccbc2e7cff
   );
 }
