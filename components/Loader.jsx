@@ -56,4 +56,3 @@ const styles = {
 };
 
 export default Loader;
-
